@@ -13,11 +13,11 @@ html {
 
 body {
   //padding: 0 15px;
-  //font-family: "Inter", sans-serif;
+  font-family: 'Proxima Nova', Roboto, system-ui, Tahoma, sans-serif;
   //font-weight: 700;
   //font-size: 14px;
   //line-height: 17px;
-  //color: rgb(0 0 0);
+  color: #232323;
   //background-color: rgb(60 60 60);
 }
 
@@ -55,4 +55,5 @@ input,
 button {
   background: transparent;
   border: none;
+  outline: none;
 }
