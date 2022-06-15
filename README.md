@@ -1,7 +1,7 @@
-# Project: pizzeria "Signor pomodoro"
+# Project: pizzeria "Senior Pomodoro"
 
 ## Description
-Pizzeria "Signor tomato" - online pizzeria.
+Pizzeria "Senior Pomodoro" - online pizzeria.
 Implemented features:
 * 1
 * 2
