@@ -1,4 +1,4 @@
-# Project: pizzeria "Senior Pomodoro"
+# Project: Pizzeria "Senior Pomodoro"
 
 ## Description
 Pizzeria "Senior Pomodoro" - online pizzeria.
@@ -14,27 +14,34 @@ P.S. Used as a server [?](https://mockapi.io)
 
 ## Installation
 
-1. Clone the repository from GitHub: ``git clone git@github.com:Exigoll/timberland.git``
+1. Clone the repository from GitHub: ``git clone git@github.com:Exigoll/seniorPomodoro.git``
 2. Install Dependencies:  ``npm install``
 3. Start the project:  ``npm start``
 
 ## Development stages
-* [Homepage](https://exigoll.github.io/timberland/)
-* [Build](https://github.com/Exigoll/timberland)
-* [Production](https://github.com/Exigoll/timberland/tree/gh-pages)
+* [Homepage](https://exigoll.github.io/seniorPomodoro)
+* [Build](https://github.com/Exigoll/seniorPomodoro)
+* [Production](https://github.com/Exigoll/seniorPomodoro/tree/gh-pages)
 
 ## Technology stack
-* React ver. 18.0
-* React Hooks:
-    * useState()
-    * useEffect()
-    * useContext()
-    * custom hook UseCart()
-* ESLing / Prettier
-* RestAPI: Axios / Fetch
-* mockAPI
-* SCSS / module SCSS
-* React Skeleton
+* Front-end:
+  * TypeScript
+  * React 18
+    * Hooks:
+      * useState
+      * useEffect
+    * React Router V6
+    * React Context
+    * React Skeleton
+  * Redux Toolkit (data store)
+  * SCSS / module SCSS
+* Back-end:
+  * RestAPI:
+    * Axios
+    * Fetch
+  * mockAPI
+* Other:
+  * ESLing / Prettier / Husky
 
 ## Contacts info
 * Location: city of Perm
