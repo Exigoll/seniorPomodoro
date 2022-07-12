@@ -12,8 +12,6 @@
 # production
 /build
 
-Conspect.md
-
 # misc
 .DS_Store
 .env.local

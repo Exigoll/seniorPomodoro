@@ -1,4 +1,5 @@
 @import '../variables';
+@import "../all";
 
 .header {
   border-bottom: 1px solid $gray-line;
@@ -8,6 +9,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: em(1180)) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
 
   &__logo {
@@ -19,13 +25,14 @@
 
     h1 {
       color: #181818;
-      font-size: 24px;
+      @include adaptive-value("font-size", 24, 22, 0);
       letter-spacing: 0.01px;
       text-transform: uppercase;
       font-weight: 800;
     }
 
     p {
+      @include adaptive-value("font-size", 16, 14, 0);
       color: #7b7b7b;
     }
   }

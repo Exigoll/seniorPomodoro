@@ -46,6 +46,19 @@
         "additionalHooks": "(useMyCustomHook|useMyOtherCustomHook)"
       }
     ],
-    "no-shadow": "off"
+    // Предотвращение проверки отсутствия реквизитов в определении компонента React
+    "react/prop-types": "off",
+    // Запрещает неиспользуемые переменные
+    "no-unused-vars": "off",
+    // Запретить использование индекса массива в ключах
+    "react/no-array-index-key": "off",
+    // Принудительное применение определенного типа функции для функ. комп.
+    "react/function-component-definition": "off",
+    // Запретить пустые шаблоны деструктурирования
+    "no-empty-pattern": "off",
+    // Гарантирует отсутствие разрешимого пути обратно к этому модулю через его зависимости
+    "import/no-cycle": "off",
+    // Это правило предотвращает использование нестабильных значений (т. е. идентификаторов объектов) в качестве значения для Context.Provider.
+    "jsx-no-constructed-context-values": "off"
   }
 }

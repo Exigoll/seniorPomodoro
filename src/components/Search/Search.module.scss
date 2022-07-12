@@ -1,0 +1,41 @@
+@import "../../scss/all";
+
+.search {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+
+  &__input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 34px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    font-size: 16px;
+
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, .2);
+    }
+  }
+  &__iconSearch,
+  &__iconClear {
+    position: absolute;
+    top: 12px;
+    opacity: .3;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__iconSearch {
+    left: 10px;
+  }
+
+  &__iconClear {
+    right: 10px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
