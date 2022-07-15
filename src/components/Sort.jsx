@@ -1,6 +1,24 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const Sort = ({ value, onClickSort }) => {
+import { setSort } from "../redux/slices/filterSlice";
+
+/**
+ * category names to filter
+ */
+const popupList = [
+  { name: "популярности(DESC)", sortProperty: "rating" },
+  { name: "популярности(ASC)", sortProperty: "-rating" },
+  { name: "цене(DESC)", sortProperty: "price" },
+  { name: "цене(ASC)", sortProperty: "-price" },
+  { name: "алфавиту(DESC)", sortProperty: "title" },
+  { name: "алфавиту(ASC)", sortProperty: "-title" },
+];
+
+const Sort = () => {
+  const dispatch = useDispatch();
+  const sort = useSelector((state) => state.filterSlice.sort);
+
   /**
    * open / closed popup
    * default value = false - popup is closed
@@ -8,24 +26,12 @@ const Sort = ({ value, onClickSort }) => {
   const [actionPopup, setActionPopup] = React.useState(false);
 
   /**
-   * category names to filter
-   */
-  const popupList = [
-    { name: "популярности(DESC)", sortProperty: "rating" },
-    { name: "популярности(ASC)", sortProperty: "-rating" },
-    { name: "цене(DESC)", sortProperty: "price" },
-    { name: "цене(ASC)", sortProperty: "-price" },
-    { name: "алфавиту(DESC)", sortProperty: "title" },
-    { name: "алфавиту(ASC)", sortProperty: "-title" },
-  ];
-
-  /**
    * function category selection:
    * setSelectedCategory(i) - вызов функции, которая выбирает категорию по индексу массива;
    * setActionPopup(false) - закрывает popup
    */
-  const onClickCategory = (i) => {
-    onClickSort(i);
+  const onClickCategory = (obj) => {
+    dispatch(setSort(obj));
     setActionPopup(false);
   };
 
@@ -38,7 +44,7 @@ const Sort = ({ value, onClickSort }) => {
         {popupList.map((obj, i) => (
           <button
             key={i}
-            className={value.sortProperty === obj.sortProperty ? "active" : ""}
+            className={sort.sortProperty === obj.sortProperty ? "active" : ""}
             onClick={() => onClickCategory(obj)}
             type="button"
           >
@@ -67,7 +73,7 @@ const Sort = ({ value, onClickSort }) => {
           </svg>
           <b>Сортировка по:</b>
           <button onClick={() => setActionPopup(!actionPopup)} type="button">
-            {value.name}
+            {sort.name}
           </button>
         </div>
         {actionPopup && elemPopup}

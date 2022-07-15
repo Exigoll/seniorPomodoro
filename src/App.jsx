@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="wrapper">
-        <SearchContext.Provider value={(searchValue, setSearchValue)}>
+        <SearchContext.Provider value={{ searchValue, setSearchValue }}>
           <Header />
           <div className="content">
             <div className="container">

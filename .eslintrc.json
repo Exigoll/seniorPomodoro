@@ -59,6 +59,8 @@
     // Гарантирует отсутствие разрешимого пути обратно к этому модулю через его зависимости
     "import/no-cycle": "off",
     // Это правило предотвращает использование нестабильных значений (т. е. идентификаторов объектов) в качестве значения для Context.Provider.
-    "jsx-no-constructed-context-values": "off"
+    "react/jsx-no-constructed-context-values": "off",
+    // Запретить переназначение function параметров
+    "no-param-reassign": "off"
   }
 }
